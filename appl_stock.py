@@ -143,7 +143,7 @@ def load(cur, records):
 # Define the task dependencies using the decorator functions
 with dag:
     stock_data = extract()
-    last_90_days_data = return_last_90d_price('MSFT')
+    last_90_days_data = return_last_90d_price('AAPL')
     transformed_data = transform(last_90_days_data)
     
     # Load the data into Snowflake
